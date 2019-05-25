@@ -13,7 +13,7 @@ fi
 
 # Careful: Toolchain path needs to go at the end to avoid picking up MSYS functions instead of Cygwin
 
-NUTTX=$PWD/../nuttx
+NUTTX=$PWD/../../nuttx
 if [ ! -d "$NUTTX" ]; then
   echo "Where are you?"
   exit 1
