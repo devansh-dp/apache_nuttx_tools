@@ -218,7 +218,8 @@ to
 With this change, upstream should build fine both with gperf 3.1 and older
 versions.
 
-NOTE:  This change has already been applied in the code base.
+NOTE:  This change has already been applied in the code base.  See also
+gperf3.1_kconfig_id_lookup.patch
 
 See kconfig-frontends-3.12.0-sizet.patch for the 3.12.0 version.
 (from https://gist.github.com/KamilSzczygiel/d16a5d88075939578f7bd8fadd0907aa)
