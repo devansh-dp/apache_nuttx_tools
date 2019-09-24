@@ -136,11 +136,10 @@ kconfig-frontends-3.3.0-1-libintl.patch
     make
     make install
 
-  See: http://ymorin.is-a-geek.org/hg/kconfig-frontends/file/tip/docs/known-issues.txt
+  Update: Version 3.6.0 (and above) will build on Cygwin with no patches.
 
-  Update: Version 3.6.0 (and above) will build on Cygwin with no patches:
-
-    http://ymorin.is-a-geek.org/download/kconfig-frontends/
+  The NuttX tools repository has kconfig-frontends-3.12 and
+  kconfig-frontends-4.11, both of which build without this patch.
 
 kconfig-macos.patch
 -------------------
@@ -152,6 +151,9 @@ kconfig-macos.patch
     ./configure --disable-shared --enable-static --disable-gconf --disable-qconf --disable-nconf --disable-utils
     make
     make install
+
+  The NuttX tools repository has kconfig-frontends-3.12 and
+  kconfig-frontends-4.11, both of which build without this patch.
 
 kconfig-mconf Path Issues
 -------------------------
