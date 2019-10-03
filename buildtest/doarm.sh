@@ -20,7 +20,8 @@ else
   cat armlist.template | sed -e "s/_EABIx/_EABIL/g" >armlist.dat
   ENVOPT=-l
 fi
-CPUOPT="-j 4"
+#CPUOPT="-j 4"
+unset CPUOPT
 export PATH="${TOOLCHAIN_BIN}:/sbin:/usr/sbin:${PATH_ORIG}"
 
 if [ -z "$TESTLIST" ]; then
