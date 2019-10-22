@@ -16,6 +16,7 @@ Contents:
     - kconfig-frontends for Windows
     - Buildroot
   o nxfuse
+  o bcm43438
 
 buildtest
 =========
@@ -298,4 +299,9 @@ nxfuse
 A Linux FUSE implmentation that enables native mounting of NuttX filesystems
 in Linux.  Currently supports SmartFS and NXFFS (within the limitations of
 the NXFFS architecture).  See the nxfuse/README.txt file for further information.
+
+bcm43438
+========
+
+A snapshot of free-use but proprietry firmware for use with the BCM43438
 
