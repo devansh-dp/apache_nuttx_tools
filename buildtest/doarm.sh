@@ -2,8 +2,16 @@
 #set -x
 
 WD=$PWD
-TESTLIST=$1
 HOSTOS=$(uname -o 2>/dev/null || echo "Other")
+
+unset CPUOPT
+if [ "X$1" == "X-j" ]; then
+  shift
+  CPUOPT="-j $1"
+  shift
+fi
+
+TESTLIST=$1
 
 if [ -z "${PATH_ORIG}" ]; then
   export PATH_ORIG="${PATH}"
@@ -20,8 +28,7 @@ else
   cat armlist.template | sed -e "s/_EABIx/_EABIL/g" >armlist.dat
   ENVOPT=-l
 fi
-#CPUOPT="-j 4"
-unset CPUOPT
+
 export PATH="${TOOLCHAIN_BIN}:/sbin:/usr/sbin:${PATH_ORIG}"
 
 if [ -z "$TESTLIST" ]; then
