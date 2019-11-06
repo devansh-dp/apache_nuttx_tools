@@ -10,7 +10,6 @@ if [ "X${1}" == "X-j" ]; then
   CPUOPT="-j $1"
   shift
 fi
-echo $CPUOPT
 
 TESTLIST=$1
 
