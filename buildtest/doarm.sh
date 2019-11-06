@@ -5,11 +5,12 @@ WD=$PWD
 HOSTOS=$(uname -o 2>/dev/null || echo "Other")
 
 unset CPUOPT
-if [ "X$1" == "X-j" ]; then
+if [ "X${1}" == "X-j" ]; then
   shift
   CPUOPT="-j $1"
   shift
 fi
+echo $CPUOPT
 
 TESTLIST=$1
 
