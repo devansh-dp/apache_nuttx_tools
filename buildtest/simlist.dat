@@ -1,3 +1,5 @@
+sim:rpproxy
+sim:rpserver
 sim:dsptest
 sim:bas
 sim:configdata
