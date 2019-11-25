@@ -25,7 +25,6 @@ sim:pktradio
 sim:sixlowpan
 sim:spiffs
 sim:touchscreen
-sim:traveler
 sim:udgram
 sim:unionfs
 sim:ustream
