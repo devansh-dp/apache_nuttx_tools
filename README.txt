@@ -17,6 +17,7 @@ Contents:
     - Buildroot
   o nxfuse
   o bcm43438
+  o mkimage.sh
 
 buildtest
 =========
@@ -296,12 +297,21 @@ need ROMFS, configuration, and NXFLAT.
 nxfuse
 ======
 
-A Linux FUSE implmentation that enables native mounting of NuttX filesystems
+A Linux FUSE implementation that enables native mounting of NuttX filesystems
 in Linux.  Currently supports SmartFS and NXFFS (within the limitations of
 the NXFFS architecture).  See the nxfuse/README.txt file for further information.
 
 bcm43438
 ========
 
-A snapshot of free-use but proprietry firmware for use with the BCM43438
+A snapshot of free-use but proprietary firmware for use with the BCM43438
 
+mkimage.sh
+==========
+
+The creates a download-able image as needed for use with the RRLOAD
+bootloader.  The RRLOAD binary format used with BSPs from www.ridgerun.com
+using the mkimage.sh script.  This only applies to the again port to the
+TI/Spectrum Digital C5471 board which may include the RRLOAD bootloader.
+
+It resides here (vs. nuttx/tools/.) because it has a GPL license.
