@@ -29,6 +29,8 @@ else
   ENVOPT=-l
 fi
 
+SIZEOPT=-si
+
 export PATH="${TOOLCHAIN_BIN}:/sbin:/usr/sbin:${PATH_ORIG}"
 
 if [ -z "$TESTLIST" ]; then
@@ -57,5 +59,5 @@ if [ ! -x "$TESTBUILD" ]; then
   exit 1
 fi
 
-$TESTBUILD $CPUOPT $ENVOPT $WD/$TESTLIST 1>$WD/armtest.log 2>&1
+$TESTBUILD $CPUOPT $ENVOPT $SIZEOPT $WD/$TESTLIST 1>$WD/armtest.log 2>&1
 rm -f $WD/armlist.dat
