@@ -1,3 +1,4 @@
+spresense:posix_spawn,CONFIG_ARMV7M_TOOLCHAIN_GNU_EABIx
 sama5d3-xplained:ethernet-over-usb,CONFIG_ARMV7A_TOOLCHAIN_GNU_EABIx
 sama5d3-xplained:ethernet-over-usb-telnetd,CONFIG_ARMV7A_TOOLCHAIN_GNU_EABIx
 nucleo-l432kc:spwm,CONFIG_ARMV7M_TOOLCHAIN_GNU_EABIx
