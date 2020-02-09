@@ -39,4 +39,4 @@ if [ ! -x "$TESTBUILD" ]; then
   exit 1
 fi
 
-$TESTBUILD -w -c $WD/$TESTLIST 1>$WD/avrtest.log 2>&1
+$TESTBUILD -c $WD/$TESTLIST 1>$WD/avrtest.log 2>&1

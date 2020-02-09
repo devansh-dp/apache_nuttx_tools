@@ -42,4 +42,4 @@ fi
 # NOTE: Some linker scripts contain this line: OUTPUT_ARCH(pic32mx)
 # This will cause a linking failure in the very last steps and must be ignored
 
-$TESTBUILD -w -c $WD/$TESTLIST 1>$WD/mipstest.log 2>&1
+$TESTBUILD -c $WD/$TESTLIST 1>$WD/mipstest.log 2>&1
