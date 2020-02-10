@@ -1,3 +1,4 @@
+sim:tcploop
 sim:rpproxy
 sim:rpserver
 sim:dsptest
