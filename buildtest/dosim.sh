@@ -1,6 +1,14 @@
 #!/bin/bash
 
 WD=$PWD
+HOSTOS=$(uname -o 2>/dev/null || echo "Other")
+
+unset CPUOPT
+if [ "X${1}" == "X-j" ]; then
+  shift
+  CPUOPT="-j $1"
+  shift
+fi
 
 TESTLIST=$1
 if [ -z "$TESTLIST" ]; then
@@ -34,6 +42,14 @@ else
   fi
 fi
 
+if [ "X${HOSTOS}" == "XCygwin" ]; then
+  ENVOPT=-c
+else
+  ENVOPT=-l
+fi
+
+SIZEOPT=-si
+
 cd $NUTTX
 TESTBUILD=tools/testbuild.sh
 if [ ! -x "$TESTBUILD" ]; then
@@ -41,4 +57,4 @@ if [ ! -x "$TESTBUILD" ]; then
   exit 1
 fi
 
-$TESTBUILD -c $WD/$TESTLIST 1>$WD/simtest.log 2>&1
+$TESTBUILD $CPUOPT $ENVOPT $SIZEOPT $WD/$TESTLIST 1>$WD/simtest.log 2>&1
