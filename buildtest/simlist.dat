@@ -1,3 +1,6 @@
+sim:userfs
+sim:fb
+sim:bluetooth
 sim:tcploop
 #sim:rpproxy
 #sim:rpserver
@@ -20,7 +23,6 @@ sim:nxffs
 sim:nxlines
 #sim:nxwm
 sim:ostest
-#sim:pashello
 sim:pf_ieee802154
 sim:pktradio
 sim:sixlowpan
