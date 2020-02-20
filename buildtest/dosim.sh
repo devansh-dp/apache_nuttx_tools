@@ -48,8 +48,6 @@ else
   ENVOPT=-l
 fi
 
-SIZEOPT=-si
-
 cd $NUTTX
 TESTBUILD=tools/testbuild.sh
 if [ ! -x "$TESTBUILD" ]; then
@@ -57,4 +55,4 @@ if [ ! -x "$TESTBUILD" ]; then
   exit 1
 fi
 
-$TESTBUILD $CPUOPT $ENVOPT $SIZEOPT $WD/$TESTLIST 1>$WD/simtest.log 2>&1
+$TESTBUILD $CPUOPT $ENVOPT $WD/$TESTLIST 1>$WD/simtest.log 2>&1
