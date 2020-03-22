@@ -1,3 +1,4 @@
+xmc4700-relax:nsh,CONFIG_ARMV7M_TOOLCHAIN_GNU_EABIx
 sama5d3-xplained:ethernet-over-usb-2-high-speed,CONFIG_ARMV7M_TOOLCHAIN_GNU_EABIx
 imxrt1060-evk:nshocram,CONFIG_ARMV7M_TOOLCHAIN_GNU_EABIx
 sama5d2-xult:netnsh,CONFIG_ARMV7A_TOOLCHAIN_GNU_EABIx
