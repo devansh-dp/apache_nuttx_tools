@@ -24,7 +24,7 @@ if [ "X${HOSTOS}" == "XCygwin" ]; then
   cat armlist.template | sed -e "s/_EABIx/_EABIW/g" >armlist.dat
   ENVOPT="-w -c"
 else
-  TOOLCHAIN_BIN="/usr/bin/gcc-arm-none-eabi/bin"
+  TOOLCHAIN_BIN="/usr/bin/gcc-arm-none-eabi-9-2019-q4-major/bin"
   cat armlist.template | sed -e "s/_EABIx/_EABIL/g" >armlist.dat
   ENVOPT=-l
 fi
