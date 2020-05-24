@@ -57,5 +57,5 @@ if [ ! -x "$TESTBUILD" ]; then
   exit 1
 fi
 
-$TESTBUILD $CPUOPT $ENVOPT $WD/$TESTLIST 1>$WD/armtest.log 2>&1
+$TESTBUILD -e -Werror $CPUOPT $ENVOPT $WD/$TESTLIST 1>$WD/armtest.log 2>&1
 rm -f $WD/armlist.dat
