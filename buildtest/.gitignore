@@ -1,4 +1,4 @@
 *.log
 *.log.last
 *.dat
-err*.dat
+err*.txt
