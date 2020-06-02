@@ -17,23 +17,7 @@ export TOOLCHAIN_PREBIN=
 export TOOLCHAIN_POSTBIN=:"/cygdrive/c/pinguino-11/compilers/p32/bin"
 export PATH="${TOOLCHAIN_PREBIN}${PIC32TOOL_DIR}:/sbin:/usr/sbin:${PATH_ORIG}${TOOLCHAIN_POSTBIN}"
 
-# Assume nuttx/ is at some directory above this one
-
-cd ..
-if [ -d nuttx ]; then
-  NUTTX=$PWD/nuttx
-else
-  cd ..
-  if [ -d nuttx ]; then
-    NUTTX=$PWD/nuttx
-  else
-    echo "Cant find nuttx/ directory"
-    exit 1
-  fi
-fi
-
-cd $NUTTX
-TESTBUILD=tools/testbuild.sh
+TESTBUILD=./testbuild.sh
 if [ ! -x "$TESTBUILD" ]; then
   echo "Help!!! I can't find testbuild.sh"
   exit 1

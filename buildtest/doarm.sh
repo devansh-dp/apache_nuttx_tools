@@ -35,23 +35,7 @@ if [ -z "$TESTLIST" ]; then
   TESTLIST=armlist.dat
 fi
 
-# Assume nuttx/ is at some directory above this one
-
-cd ..
-if [ -d nuttx ]; then
-  NUTTX=$PWD/nuttx
-else
-  cd ..
-  if [ -d nuttx ]; then
-    NUTTX=$PWD/nuttx
-  else
-    echo "Can't find nuttx/ directory"
-    exit 1
-  fi
-fi
-
-cd $NUTTX
-TESTBUILD=tools/testbuild.sh
+TESTBUILD=./testbuild.sh
 if [ ! -x "$TESTBUILD" ]; then
   echo "Help!!! I can't find testbuild.sh"
   exit 1
