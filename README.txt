@@ -40,7 +40,9 @@ genromfs-0.5.2.tar.gz
 
 kconfig-frontends
 =================
-
+.configure script is modified so it can be easily compiled for Arch Linux based systems. Please make sure that aclocal and automake are on the latest version (>1.15). 
+Install pkgconf package.
+generate build for mconf target only.
 General Build Instructions
 --------------------------
 
